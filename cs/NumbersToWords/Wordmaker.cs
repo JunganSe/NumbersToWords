@@ -5,6 +5,7 @@ public class Wordmaker
     public List<string> KeyT9English { get; }
     public List<string> KeyT9EnglishExtended { get; }
     public List<string> KeyT9Swedish { get; }
+    public List<string> KeyT9SwedishExtended { get; }
 
     public Wordmaker()
     {
@@ -47,7 +48,7 @@ public class Wordmaker
             "TUV",  // 8
             "WXYZ"  // 9
         };
-        KeyT9Swedish = new List<string>() // T9 där 1=2 och 0=9
+        KeyT9SwedishExtended = new List<string>() // T9 där 1=2 och 0=9
         {
             "WXYZ", // 0
             "ABCÅÄ",// 1
