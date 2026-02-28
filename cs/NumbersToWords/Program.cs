@@ -7,20 +7,16 @@ internal class Program
         Console.Write("Enter numbers: ");
         string? input = Console.ReadLine();
 
-        if (InputChecker.IsDigits(input))
+        if (!InputChecker.IsDigits(input))
         {
-            var wordMaker = new Wordmaker();
-            var combinations = wordMaker.GetCombinations(input!, wordMaker.KeyT9EnglishExtended);
+            Console.WriteLine("Not T9 compatible.");
+            return;
+        }
 
-            foreach (var item in combinations)
-            {
-                Console.WriteLine(item);
-            }
-            Console.WriteLine(combinations.Count + " combinations");
-        }
-        else
-        {
-            Console.WriteLine("Not T9.");
-        }
+        var wordMaker = new Wordmaker();
+        var combinations = wordMaker.GetCombinations(input!, wordMaker.KeyT9EnglishExtended);
+
+        Console.WriteLine(string.Join("\n", combinations));
+        Console.WriteLine(combinations.Count + " combinations");
     }
 }
