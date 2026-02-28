@@ -4,31 +4,15 @@
     {
         public static bool IsDigits(string? input)
         {
-            if (string.IsNullOrEmpty(input))
-                return false;
-
-            foreach (char c in input)
-            {
-                if (!char.IsDigit(c))
-                    return false;
-            }
-
-            return true;
+            return !string.IsNullOrEmpty(input)
+                && input.All(char.IsDigit);
         }
 
         public static bool IsT9(string? input)
         {
-            if (string.IsNullOrEmpty(input))
-                return false;
-
             string validCharacters = "23456789";
-            foreach (char c in input)
-            {
-                if (!validCharacters.Contains(c))
-                    return false;
-            }
-
-            return true;
+            return !string.IsNullOrEmpty(input)
+                && input.All(c => validCharacters.Contains(c));
         }
     }
 }
