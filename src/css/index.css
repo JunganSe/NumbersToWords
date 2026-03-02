@@ -1,0 +1,28 @@
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 20rem;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container_input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.container_output {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+
+    textarea {
+        /* TODO: Let the textarea take up the full available height. */
+        height: 10rem
+    }
+}

@@ -7,21 +7,24 @@
     <title>Numbers to words</title>
     <link rel="icon" href="data:," /> <!-- Disable default favicon request -->
     <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/index.css">
 </head>
 
 <body>
-    <h1>Numbers to words</h1>
+    <main>
+        <h1>Numbers to words</h1>
 
-    <div class="container_input">
-        <label for="input_digits">Input</label>
-        <input type="text" id="input_digits" placeholder="e.g. 1234">
-        <button id="btn_start">Find words</button>
-    </div>
+        <div class="container_input">
+            <label for="input_digits">Input</label>
+            <input type="text" id="input_digits" placeholder="e.g. 1234">
+            <button id="btn_start">Find words</button>
+        </div>
 
-    <div class="container_output">
-        <label for="textarea_output">Output</label>
-        <textarea id="textarea_output"></textarea>
-    </div>
+        <div class="container_output">
+            <label for="textarea_output">Output</label>
+            <textarea id="textarea_output"></textarea>
+        </div>
+    </main>
 
     <script type="module" src="/src/main.ts"></script>
 </body>
