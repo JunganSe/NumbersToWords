@@ -1,1 +1,4 @@
-console.log('It werks!');
+import { Controller } from "./control/controller";
+
+const controller = new Controller();
+controller.initialize();
