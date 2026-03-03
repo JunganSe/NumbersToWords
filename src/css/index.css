@@ -1,13 +1,9 @@
 main {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     width: 20rem;
     margin: auto;
-}
-
-h1 {
-    text-align: center;
 }
 
 .container_input {
@@ -23,6 +19,7 @@ h1 {
 
     textarea {
         /* TODO: Let the textarea take up the full available height. */
-        height: 10rem
+        height: 30rem;
+        resize: none;
     }
 }

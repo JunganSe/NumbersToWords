@@ -1,0 +1,20 @@
+h1 {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+label {
+    font-weight: bold;
+}
+
+button {
+    cursor: pointer;
+}
+
+input,
+button,
+textarea,
+select {
+    border-radius: 5px;
+    padding: 0.1rem 0.25rem;
+}
