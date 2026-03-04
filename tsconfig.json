@@ -12,6 +12,8 @@
     "skipLibCheck": true,
     "noEmit": true,
     "strict": true,
+    "baseUrl": "./src",
+    "sourceMap": true,
     
     /* Linting */
     "strictNullChecks": true,

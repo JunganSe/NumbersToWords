@@ -1,4 +1,4 @@
-import { htmlHandler } from "../io/htmlHandler";
+import { htmlHandler } from "io/htmlHandler";
 
 export class Controller {
     initialize(): void {
