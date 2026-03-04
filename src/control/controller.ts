@@ -1,3 +1,5 @@
+import { htmlHandler } from "../io/htmlHandler";
+
 export class Controller {
     initialize(): void {
         this.setEvents();
@@ -8,8 +10,8 @@ export class Controller {
     }
 
     private run(): void {
-        const input = (document.getElementById('input_digits') as HTMLInputElement).value;
+        const input = htmlHandler.getInputText();
         const output = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, quaerat!'; // TODO: Replace with actual output from the conversion logic.
-        (document.getElementById('textarea_output') as HTMLTextAreaElement).value = input + output;
+        htmlHandler.setOutputText(input + output);
     }
 }
