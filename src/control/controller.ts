@@ -11,7 +11,17 @@ export class Controller {
 
     private run(): void {
         const input = htmlHandler.getInputText();
-        const output = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, quaerat!'; // TODO: Replace with actual output from the conversion logic.
-        htmlHandler.setOutputText(input + output);
+        if (!input)
+            return;
+
+        const isInputValid = validateInput(input);
+        if (!isInputValid) {
+            htmlHandler.setOutputText('Invalid input. Please enter only digits.');
+            return;
+        }
+
+        const letterCombinations = getLetterCombinations(input);
+        const matchingWords = findMatchingWords(letterCombinations);
+        htmlHandler.setOutputText(matchingWords);
     }
 }
