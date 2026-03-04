@@ -15,7 +15,7 @@ export class Controller {
         if (!input)
             return;
 
-        const isInputValid = validateInput(input);
+        const isInputValid = inputValidator.isDigitsOnly(input);
         if (!isInputValid) {
             htmlHandler.setOutputText('Invalid input. Please enter only digits.');
             return;
