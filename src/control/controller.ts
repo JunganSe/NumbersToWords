@@ -1,4 +1,5 @@
-import { htmlHandler } from "io/htmlHandler";
+import { htmlHandler } from "@/io/htmlHandler";
+import { inputValidator } from "@/validation/inputValidator";
 
 export class Controller {
     initialize(): void {
