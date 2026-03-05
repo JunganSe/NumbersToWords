@@ -1,4 +1,5 @@
 import { htmlHandler } from "@/io/htmlHandler";
+import { T9Parser } from "@/parsing/t9Parser";
 import { inputValidator } from "@/validation/inputValidator";
 
 export class Controller {
@@ -21,8 +22,9 @@ export class Controller {
             return;
         }
 
-        const letterCombinations = getLetterCombinations(input);
-        const matchingWords = findMatchingWords(letterCombinations);
+        const letterCombinations = T9Parser.parse(input);
+        const matchingWords = letterCombinations.join(' '); // TEMP: Placeholder for actual word matching logic
+        // const matchingWords = findMatchingWords(letterCombinations);
         htmlHandler.setOutputText(matchingWords);
     }
 }
