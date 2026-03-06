@@ -1,4 +1,5 @@
 import { htmlHandler } from "@/io/htmlHandler";
+import { T9Maps } from "@/parsing/t9Maps";
 import { T9Parser } from "@/parsing/t9Parser";
 import { inputValidator } from "@/validation/inputValidator";
 
@@ -22,8 +23,8 @@ export class Controller {
             return;
         }
 
-        const letterCombinations = T9Parser.parse(input);
-        const matchingWords = letterCombinations.join(' '); // TEMP: Placeholder for actual word matching logic
+        const letterCombinations = T9Parser.getAllCombinations_v2(input, T9Maps.t9);
+        const matchingWords = letterCombinations.join(' '); // TEMP: Placeholder for actual word matching logic.
         // const matchingWords = findMatchingWords(letterCombinations);
         htmlHandler.setOutputText(matchingWords);
     }
