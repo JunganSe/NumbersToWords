@@ -10,6 +10,10 @@ export class Controller {
 
     private setEvents(): void {
         document.getElementById('btn_start')?.addEventListener('click', this.run);
+        document.getElementById('input_digits')?.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter')
+                this.run();
+        });
     }
 
     private run(): void {
