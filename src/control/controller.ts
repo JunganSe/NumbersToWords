@@ -1,3 +1,4 @@
+import { callOnEnterKey } from "@/control/events";
 import { htmlHandler } from "@/io/htmlHandler";
 import { T9Maps } from "@/parsing/t9Maps";
 import { T9Parser } from "@/parsing/t9Parser";
@@ -10,10 +11,7 @@ export class Controller {
 
     private setEvents(): void {
         document.getElementById('btn_start')?.addEventListener('click', this.run);
-        document.getElementById('input_digits')?.addEventListener('keydown', (event) => {
-            if (event.key === 'Enter')
-                this.run();
-        });
+        document.getElementById('input_digits')?.addEventListener('keydown', (event) => callOnEnterKey(event, this.run));
     }
 
     private run(): void {
